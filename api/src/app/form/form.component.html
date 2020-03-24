@@ -1,0 +1,51 @@
+<div>
+    <app-navbar></app-navbar>
+</div>
+<!-- Formulario Creacion Registro -->
+<div class="container mt-5" style="width: 58rem;">
+    <div class="card bg-light text-white">
+        <div class="card-header text-dark">Registrar Transaccion</div>
+        <div class="card-body">
+            <form (ngSubmit)="create()">
+
+                <div class="form-group row">
+                    <label for="fecha" class="col-form-label col-sm-2 text-dark">Fecha</label>
+                    <div class="col-sm-6">
+                        <input type="date" class="form-control" [(ngModel)]="usuario.fecha" name="fecha">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="tarjeta" class="col-form-label col-sm-2 text-dark">Tarjeta</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="usuario.tarjeta" name="tarjeta">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="establecimiento" class="col-form-label col-sm-2 text-dark">Establecimiento</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="usuario.establecimiento"
+                            name="establecimiento">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="number" class="col-form-label col-sm-2 text-dark">Valor</label>
+                    <div class="col-sm-6">
+                        <input type="number" class="form-control" [(ngModel)]="usuario.valor" name="valor">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <button class="btn btn-dark" role="button" type="submit" *ngIf="!usuario.id else elseBlock">Crear</button>
+                        <ng-template #elseBlock>
+                            <button class="btn btn-dark" role="button" (click)="update()">Editar</button>
+                        </ng-template>
+                    </div>
+                </div> 
+            </form>
+        </div>
+    </div>
+</div>

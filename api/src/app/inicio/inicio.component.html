@@ -1,0 +1,33 @@
+<div *ngIf="!loginRight">
+  <div class="center">
+    <div class="login sombra">
+      <i class="far fa-user icon"></i>
+      <div class="contenedor">
+        <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)">
+          <mat-label class="text-center ce">Usuario</mat-label>
+          <br>
+          <mat-form-field class="inpu text-center cy">
+            <input matInput [(ngModel)]="usuarioIngresado" formControlName="user" class="align-middle" type="text" placeholder=""
+              required>
+          </mat-form-field>
+          <br>
+          <mat-label class="text-center cr">Contraseña</mat-label>
+          <br>
+          <mat-form-field class="inpu text-center cy">
+            <input matInput [(ngModel)]="contrasena" formControlName="pass" type="password" placeholder="" required>
+          </mat-form-field>
+          <a routerLinkActive="active"><button mat-raised-button type="submit" class="btn btn-light mt-5 boton" color="primary">Login</button></a>
+          <a (click)="forget()" style="cursor: pointer;">
+            <p class="forget text-center text-muted mt-4">Olvidaste Tu Contraseña?</p>
+          </a>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="despliegueAlerta == true" class="alert alert-dark" role="alert" class=" mt-3 text-center">
+    Deberas acercarte a una de nuestras <a href="" class="alert-link">sucursales</a> para el cambio de contraseña!
+  </div>
+</div>
+<div *ngIf="loginRight">
+  <app-consultas></app-consultas>
+</div>

@@ -1,0 +1,36 @@
+<div>
+    <app-navbar></app-navbar>
+</div>
+
+<div>
+    <div class="container">
+        <p class="d-flex justify-content-end mt-3">{{dia}}</p>
+        <h5>Santiago Agudelo Ramirez</h5>
+        <p>	1254 2541 6582 3255</p>
+    </div>
+    <div class="container mt-5">
+        <table class="table" >
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Tarjeta</th>
+                    <th scope="col">Establecimeinto</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Editar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of usuarios">
+                    <td>{{item.fecha}}</td>
+                    <td>{{item.tarjeta}}</td>
+                    <td>{{item.establecimiento}}</td>
+                    <td>{{item.valor}}</td>
+                    <td><button class="btn btn-light" type="button" name="button"  [routerLink]="['/lista/form/', item.id]">Editar</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div *ngIf="usuarios?.length == 0" class="alert alert-dark" role="alert" class=" mt-3 text-center">
+            No hay Registros
+        </div>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+.center {
+    display: flex;
+    justify-content: center;
+    padding-top: 7rem;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    padding-top: 2rem;
+}
+
+.login {
+    background-color: white;
+    width: 22rem;
+    height: 28rem;
+    border-radius: 14px;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    padding: 2.5rem;
+    margin-top: 1rem;
+}
+
+.sombra {
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 10px 10px 6px -6px #777;
+}
+
+.inpu {
+    background-color: rgb(240, 240, 240);
+    width: 17rem;
+    border-radius: 10px;
+    height: 3rem;
+}
+
+.boton {
+    width: 17rem;
+}
+
+.forget {
+    font-size: 13px;
+    color: gray;
+}
+
+.alerta {
+    width: 10rem;
+}
+
+.cajalogo {
+    display: flex;
+    justify-content: center;
+    padding-top: 3.5rem;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.bor {
+    border: 3px solid black;
+}
+.ce{
+    margin-left: 107px;
+}
+.cr{
+    margin-left: 93px;
+}
+.cy{
+    height: 32px;
+    margin: 11px 0;
+}
+.derecha {
+    margin-left: 55rem;
+}
+
+.nav {
+    padding: 4rem 7rem;
+}
